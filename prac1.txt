@@ -1,0 +1,33 @@
+First Program:
+var http = require(&quot;http&quot;);
+http
+.createServer(function (req, res) {
+res.writeHead(200, { &quot;Content-Type&quot;: &quot;txt/html&quot; });
+res.end(&quot;Hello World&quot;);
+})
+.listen(8081);
+
+To run it: node firstCode.js
+To see the output: Go to http://localhost:8081 -> Download the file -> Execute the file by double clicking on it.
+
+Second Program:
+myfirstmodule.js
+exports.myDateTime = function () {
+return Date();
+};
+
+
+Modulepro.js
+var http = require(&quot;http&quot;);
+var dt = require(&quot;./myfirstmodule&quot;);
+
+http
+.createServer(function (reg, res) {
+res.writeHead(200, { &quot;Content-Type&quot;: &quot;text/html&quot; });
+res.write(&quot;the data and a time are currently:&quot; + dt.myDateTime());
+res.end();
+})
+.listen(8081);
+
+To run it: node Modulepro.js
+To see the output: Go to http://localhost:8081

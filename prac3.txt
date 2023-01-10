@@ -1,0 +1,102 @@
+Install geth
+
+sudo add-apt-repository -y ppa:ethereum/ethereum
+sudo apt-get update
+sudo apt-get install ethereum
+
+Check if geth was installed
+
+geth -h
+
+Create Genesis Block
+
+mkdir my-blockchain
+cd my-blockchain
+touch genesis.json
+
+Add the following content to genesis.json
+
+{
+  "config": {
+    "chainId": 1234,
+    "homesteadBlock": 0,
+    "eip150Block": 0,
+    "eip155Block": 0,
+    "eip158Block": 0,
+    "byzantiumBlock": 0,
+    "constantinopleBlock": 0,
+    "petersburgBlock": 0,
+    "ethash": {}
+  },
+  "difficulty": "4",
+  "gasLimit": "8000000",
+  "alloc": {}
+}
+
+Start Database
+
+geth init --datadir node1 genesis.json
+
+Start Node
+
+geth --datadir node1 --networkid 1234 --http --allow-insecure-unlock --nodiscover
+
+Keep this terminal running. Start another terminal.
+
+geth attach node1/geth.ipc
+
+In interactive javascript terminal
+
+admin.nodeInfo
+
+Start another terminal. Adding member peers
+
+geth init --datadir node2 genesis.json
+geth --datadir node2 --networkid 1234 --port 30304 --authrpc.port 8552
+
+Another terminal 
+
+geth attach node2/geth.ipc
+admin.nodeInfo
+
+Connecting Peers
+
+Copy enode info from first node, execute this code on the javascript terminal of the second node
+
+admin.addPeer(enode of first node)
+admin.peers
+
+Mining 
+
+personal.newAccount()
+eth.getBalance("address")
+eth.blockNumber
+miner.start() 
+miner.stop()
+eth.blockNumber
+eth.getBalance
+
+MetaMask
+
+Install MetaMask
+Create a Wallet
+Add My Blockchain
+Network Name: My Blockchain
+New RPC URL: https://127.0.0.1:8545
+Chain ID: 1234
+Currency Symbol: MYBL
+
+Import Account
+Choose JSON file of node1
+
+Transfer Funds
+Copy public address of Account1 
+Click on Send, paste the address, Confirm
+
+On first node's javascript terminal, 
+
+miner.start()
+
+Wait for a few seconds till status turns from pending to send
+
+miner.stop()

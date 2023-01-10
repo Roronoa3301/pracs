@@ -1,14 +1,16 @@
 Aim - Car auction network
 
+hyperledger file/fabric-samples/test-network
 ./network.sh down
 
 docker rm -f $(docker ps -aq)
 docker rmi -f $(docker images | grep fabcar | awk '{print $3}')
 
-
+hyperledger file/fabric-samples/ -> cd fabcar
 In Fabcar
 ./startFabric.sh javascript
 
+cd javascript
 npm install
 
 Let’s enroll user admin:
