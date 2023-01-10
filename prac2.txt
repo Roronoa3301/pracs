@@ -8,7 +8,7 @@ Practical 2
  - Install Apache Maven sudo apt install maven
  - Install Node JS
  - Install go lang (go1.18.7)
-    curl https://storage.googleapis.com/golang/go1.18.7.linux-amd64.tar.gz
+    curl https://storage.googleapis.com/golang/go1.18.7.linux-amd64.tar.gz -O
     tar xvf go1.11.linux-amd64.tar.gz
 
     export GOPATH=$HOME/go
