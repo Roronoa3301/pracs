@@ -69,9 +69,11 @@ admin.peers
 Mining 
 
 personal.newAccount()
+// It will ask for a passphrase. Enter 1234. Make sure that you enter the same code in Metamask.
 eth.getBalance("address")
 eth.blockNumber
 miner.start() 
+// Wait for 3 minutes
 miner.stop()
 eth.blockNumber
 eth.getBalance
@@ -88,6 +90,7 @@ Currency Symbol: MYBL
 
 Import Account
 Choose JSON file of node1
+// Use the passphrase entered above here.
 
 Transfer Funds
 Copy public address of Account1 
