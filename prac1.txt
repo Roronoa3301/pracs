@@ -1,3 +1,10 @@
+Run these steps on Docker installation
+1) docker --version
+2) docker pull busybox
+3) docker pull fedora
+4) docker images
+6) docker tag image_name newImageName
+
 First Program:
 var http = require("http");
 http
