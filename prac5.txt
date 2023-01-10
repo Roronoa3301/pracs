@@ -1,0 +1,45 @@
+Aim - Car auction network
+
+./network.sh down
+
+docker rm -f $(docker ps -aq)
+docker rmi -f $(docker images | grep fabcar | awk '{print $3}')
+
+
+In Fabcar
+./startFabric.sh javascript
+
+npm install
+
+Let’s enroll user admin:
+node enrollAdmin.js
+
+Register and enroll user1
+node registerUser.js
+
+Querying the ledger
+node query.js
+
+add this to your query.js
+const result = await contract.evaluateTransaction('queryCar', 'CAR4');
+
+node query.js
+
+Updating the ledger
+await contract.submitTransaction('createCar', 'CAR12', 'Honda', 'Accord', 'Black', 'Tom');
+node invoke.js
+
+In other words, change this:
+const result = await contract.evaluateTransaction('queryCar', 'CAR4');
+To this:
+const result = await contract.evaluateTransaction('queryCar', 'CAR12');
+
+node query.js
+
+Transferring the Owner
+To do this, go back to invoke.js and change the smart contract transaction from createCar to changeCarOwner with a corresponding change in input arguments:
+await contract.submitTransaction('changeCarOwner', 'CAR12', 'Dave');
+
+node invoke.js
+
+node query.js

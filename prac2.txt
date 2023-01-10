@@ -1,0 +1,34 @@
+Practical 2
+=> Setup 
+
+ - Update the System
+ - Install sudo apt install default-jdk
+ - Install Python
+ - Install Curl 
+ - Install Apache Maven sudo apt install maven
+ - Install Node JS
+ - Install go lang (go1.18.7)
+    curl https://storage.googleapis.com/golang/go1.18.7.linux-amd64.tar.gz
+    tar xvf go1.11.linux-amd64.tar.gz
+
+    export GOPATH=$HOME/go
+    export PATH=$PATH:$GOPATH/bin
+
+ - Install Docker if not exist
+ - Install Hyper Ledger curl -sSL http://bit.ly/2ysbOFE | bash -s
+ 
+=> Actual Practical
+ 
+- Starting the first Hyperledger Test Network
+ 
+ cd fabric-samples/test-network
+ ./network.sh up
+
+- Creating Channels
+./network.sh createChannel
+
+- Checking the Configs
+cat  config_update.json
+
+- Shutting Down the Network
+./network.sh down
