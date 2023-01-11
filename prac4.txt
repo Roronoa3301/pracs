@@ -1,0 +1,54 @@
+Practical 4
+Start Metasploit and KALI
+# go to scripts folder
+cd /usr/share/nmap/scripts
+
+# update scripts
+sudo nmap --script-updatedb
+
+# Checking for vulnerability
+sudo nmap -sC ip_Address
+
+# looking for ssh vulnerabilities
+ls | grep ssh
+
+nmap --script-help ssh2-enum-algos
+
+# executing ssh-run script
+nmap --script-help ssh-run
+
+nmap --script=ssh-run ip_Address 
+
+# looking for http scripts
+ls | grep http
+
+nmap --script=http-trace ipAddress
+
+#Webserver Vulnerability
+open metasploitableable ip on browser
+
+#using nikto scan
+nikto -host ipAddress
+
+# Checking php version using 
+ipAddress/phpinfo.php on browser
+
+# listing all plugins in the nikto tool
+nikto -list-plugins | more
+
+# Running specific plugin 
+sudo nikto -h ipAddress -p 80 -Plugins "apacheusers(enumerate,dictionary:users.txt);report_xml" -output apacheusers.xml
+
+cat apacheusers.xml
+
+#OWASP ZAP
+
+sudo apt install zaproxy
+
+run the tool by searching zap
+
+Enter the url 
+
+Start the scan
+
+Check the alerts 
