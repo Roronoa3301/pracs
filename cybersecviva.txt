@@ -1,0 +1,74 @@
+What is Hacking?
+Hacking is the unauthorised access, use, disruption, modification, or destruction
+of computer systems, networks, or devices, often with the goal of stealing or manipulating
+data or disrupting services.
+
+List the stages of Hacking.
+Reconnaissance
+Scanning
+Gaining Access
+Maintaining Access
+Cover Tracks
+
+What do you mean by vulnerability assessment?
+Vulnerability assessment is a process of identifying risks and vulnerabilities in computer
+systems, networks, hardware, applications, and other parts of the ecosystem. It helps in
+protecting systems and data from unauthorized access and breaches.
+
+What is Penetration Testing?
+Penetration testing (also known as "pen testing") is a simulated cyber attack on a computer
+system, network, or web application to test its defenses and identify vulnerabilities that an
+attacker could exploit. The goal of a pen test is to determine if an attacker could gain
+unauthorized access to the system or steal sensitive data.
+
+What is meant by reconnaissance?
+Reconnaissance is the initial stage of an attack, where the attacker gathers information about
+the target. This can include research on the target's employees, network infrastructure, and
+security measures. The goal of reconnaissance is to gather as much information as possible
+about the target, which can be used to plan and execute a successful attack.
+
+What are the types of reconnaissance?
+Passive reconnaissance: Passive reconnaissance is the process of gathering
+information about a target without interacting with it directly.
+Active reconnaissance: Active reconnaissance is the process of actively interacting
+with a target to gather information. 
+
+What is Port Scanning?
+Port scanning is the process of connecting to TCP and UDP ports to determine what
+services and applications are running on the target device.
+
+List the tools used for Port Scanning.
+NMAP
+Netcat
+TCP Port Scanner
+MASSCAN
+
+Define vulnerability scanning.
+Vulnerability scanning is the process of discovering, analyzing, and reporting on security
+flaws and vulnerabilities.
+Vulnerability scans are conducted via automated vulnerability scanning tools to identify
+potential risk exposures and attack vectors across an organization’s networks, hardware,
+software, and systems.
+
+List tools for vulnerability scanning.
+Burp Suite
+NMAP
+Metasploit
+Wireshark
+
+Describe the Metasploit Framework.
+The Metasploit Framework (MSF) is an open-source tool designed to facilitate
+penetration testing. It is Written in the Ruby programming language. It makes it easier to develop and code exploits, and it also allows for complex
+attacks to be easily implemented.
+
+What is firmware?
+Firmware is a software program on the hardware device, which performs functions
+like basic input/output tasks and offers necessary instructions for the device to
+communicate with other computing devices.
+
+Describe Social Engineering Toolkit(SET).
+It is an open-source python-driven framework that is specifically designed to facilitate social
+engineering attacks. The tool was designed with the objective of achieving security by
+training.It is maintained by an active group of collaborators.
+
+
