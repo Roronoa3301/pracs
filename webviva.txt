@@ -1,0 +1,142 @@
+Viva questions to be asked to be prepared for Wireless Networking practical exam.
+Practical-1
+Aim: - Configuring WEP on Wireless Router
+● What is a Wireless Router?
+A wireless router is a device that performs the functions of a router and also includes the functions of a wireless access point. It is used to provide access to the Internet or a private computer network. Depending on the manufacturer and model, it can function in a wired local area network, in a wireless-only LAN, or in a mixed wired and wireless network
+● What is WEP?
+Wired Equivalent Privacy (WEP) was a security algorithm for 802.11 wireless networks. Introduced as part of the original IEEE 802.11 standard ratified in 1997, its intention was to provide data confidentiality comparable to that of a traditional wired network. WEP, recognizable by its key of 10 or 26 hexadecimal digits (40 or 104 bits), was at one time widely used, and was often the first security choice presented to users by router configuration tools.
+● List a few qualities of wireless routers?
+Wireless routers typically feature one or more network interface controllers supporting Fast Ethernet or Gigabit Ethernet ports integrated into the main system on a chip (SoC) around which the router is built.
+Some routers implement link aggregation through which two or more ports may be used together improving throughput and redundancy.
+Some wireless routers provide multiple streams allowing multiples of data transfer rates (e.g. a three-stream wireless router allows transfers of up to 1.3 Gbit/s on the 5 GHz bands).
+Some wireless routers have one or two USB ports. These can be used to connect printer or desktop or mobile external hard disk drive to be used as a shared resource on the network. A USB port may also be used for connecting mobile broadband modem, aside from connecting the wireless router to an Ethernet with xDSL or cable modem.
+Practical- 2
+Aim: Demonstrating Distribution Layer Functions.
+● What is the job of the distribution layer?
+The distribution layer represents both a separation between the access and core layers and a connection point between the diverse access sites and the core layer. The distribution layer determines department or workgroup access and provides policy-based connectivity.
+Distribution layer devices control access to resources that are available at the core layer and must therefore use bandwidth efficiently.
+This layer provides redundant connections for access devices. Redundant connections also provide the opportunity to load-balance between devices.
+The distribution layer allows the core layer to connect diverse sites while maintaining high performance. To maintain good performance in the core, the distribution layer can redistribute between bandwidth-intensive access-layer routing protocols and optimized core routing protocols. Route filtering is also implemented at the distribution layer.
+Source: https://www.ccexpert.us/network-design/distribution-layer-functionality.html
+● Briefly explain EIGRP Protocol.
+Enhanced Interior Gateway Routing Protocol (EIGRP) is a network protocol that enables routers to exchange information more efficiently than earlier network protocols, such as Interior Gateway Routing Protocol (IGRP) or Border Gateway Protocol (BGP).
+EIGRP is a dynamic routing protocol by which routers automatically share route information. This eases the workload on a network administrator who does not have to configure changes to the routing table manually.
+In addition to the routing table, EIGRP uses the following tables to store information:
+Neighbor Table: The neighbor table keeps a record of the IP addresses of routers that have a direct physical connection with this router. Routers that are connected to this router indirectly, through another router, are not recorded in this table as they are not considered neighbors.
+Topology Table: The topology table stores routes that it has learned from neighbor routing tables. Unlike a routing table, the topology table does not store all routes, but only routes that have been determined by EIGRP. The topology table also
+records the metrics for each of the listed EIGRP routes, the feasible successor and the successors.
+● What is the basic difference between layer 2 switch and layer 3 switch?
+Layer 2 Switch Layer 3 Switch Operate on layer 2 (Data link) of OSI model. Operate on layer 3 (Network Layer) of OSI model. Send “frames” to destination on the basis of MAC address. Route Packet with help of IP address Work with MAC address only Can perform functioning of both 2 layer and 3 layer switch Used to reduce traffic on local network. Mostly Used to implement VLAN (Virtual Local area network) Quite fast as they do not look at the Layer 3 portion of the data packets. Takes time to examine data packets before sending them to their destination It has single broadcast domain It has multiple broadcast domain. Can communicate within a network only. Can communicate within or outside network.
+● What does ping command do?
+Ping is a command-line utility, available on virtually any operating system with network connectivity that acts as a test to see if a networked device is reachable.
+The ping command sends a request over the network to a specific device. A successful ping results in a response from the computer that was pinged back to the originating computer.
+Practical- 3
+Aim: Placing ACLs using Wireless Link Controller on Wireless Devices.
+● Discuss ACL features.
+In computer security, an access-control list (ACL) is a list of permissions associated with a system resource (object). An ACL specifies which users or system processes are granted access to objects, as well as what operations are allowed on given objects.
+The set of rules defined are matched serial wise i.e. matching starts with the first line, then 2nd, then 3rd, and so on.
+The packets are matched only until it matches the rule. Once a rule is matched then no further comparison takes place and that rule will be performed.
+There is an implicit denial at the end of every ACL, i.e., if no condition or rule matches then the packet will be discarded.
+● How many types of ACL we have. Name them
+There are two main different types of Access-list namely:
+Standard Access-list –
+These are the Access-list that are made using the source IP address only. These ACLs permit or deny the entire protocol suite. They don’t distinguish between the IP traffic such as TCP, UDP, HTTPS, etc. By using numbers 1-99 or 1300-1999, the router will understand it as a standard ACL and the specified address as the source IP address.
+Extended Access-list –
+These are the ACL that uses source IP, Destination IP, source port, and Destination port. These types of ACL, we can also mention which IP traffic should be allowed or denied. These use range 100-199 and 2000-2699.
+● Discuss Advantages of ACL.
+Advantages of ACL –
+Improve network performance.
+Provides security as the administrator can configure the access list according to the needs and deny the unwanted packets from entering the network.
+Provides control over the traffic as it can permit or deny according to the need of the network.
+● What is the basic difference between a normal router and a wireless router?
+Wired routers use LAN Ethernet ports to connect to a modem and access the ISP, running a cable between a computer to the router then the router to the DSL or Ethernet port. Even though the line is connected to one central computer, the router easily allows sharing of the connection to any device that is connected to the network.
+Wireless routers utilize a Wi-Fi connection to communicate between the ISP to the router, then the wireless frequency to connect to any wireless devices that log onto it. This allows multiple users to access the network easily using a password, much like the wired connection.
+When you are looking at the performance between a wired and wireless router, wired routers provide the best performance possible. Most wired connections offer 10/100/1000 Mbps bandwidth, where a wireless router offers a theoretical bandwidth of much less. Wired routers have a consistent connection as well since they are literally plugged into the router, whereas wireless connections are distance sensitive, meaning the connection will degrade the further you get from the access point.
+Practical - 4
+Aim: Planning Network Based Firewall
+● What is Firewall?
+A Firewall is a network security device that monitors and filters incoming and outgoing network traffic based on an organization’s previously established security policies. At its most basic, a firewall is essentially the barrier that sits between a private internal network and the public Internet. A firewall’s main purpose is to allow non-threatening traffic in and to keep dangerous traffic out.
+● Discuss Types of Firewall.
+Packet filtering
+A small amount of data is analyzed and distributed according to the filter’s standards.
+Proxy service
+Network security system that protects while filtering messages at the application layer.
+Stateful inspection
+Dynamic packet filtering that monitors active connections to determine which network packets to allow through the Firewall.
+Next Generation Firewall (NGFW)
+Deep packet inspection Firewall with application-level inspection.
+● How does Network-based Firewall work?
+A Firewall is a necessary part of any security architecture and takes the guesswork out of host level protections and entrusts them to your network security device. Firewalls, and especially Next Generation Firewalls, focus on blocking malware and application-layer attacks, along with an integrated intrusion prevention system (IPS), these Next Generation Firewalls can react quickly and seamlessly to detect and react to outside attacks across the whole network. They can set policies to better defend your network and carry out quick assessments to detect invasive or suspicious activity, like malware, and shut it down.
+Practical- 6
+AIM: Creating an Adhoc network
+● What is the Adhoc network?
+A wireless ad hoc network (WANET) or mobile ad hoc network (MANET) is a decentralized type of wireless network. The network is ad hoc because it does not rely on a pre-existing infrastructure, such as routers in wired networks or access points in wireless networks. Instead, each node participates in routing by forwarding data for other nodes, so the determination of which nodes forward data
+is made dynamically on the basis of network connectivity and the routing algorithm in use.
+● Discuss classification of Adhoc network.
+The types of ad hoc networks are as follows: Mobile ad hoc networks
+A mobile ad hoc network (MANET) is a self forming network of mobile devices
+connected wirelessly. Wireless mesh networks
+A wireless mesh network (WMN) is a communications network of radio nodes
+structured in a mesh topology. The clients within the network are usually laptops,
+mobile phones, and other wireless equipment. The mesh network, with the help of
+routers and gateways, transmits data to and from the wireless devices. The
+communication is within the mesh and not to the internet. Wireless sensor networks
+A wireless sensor network (WSN) employs sensor based devices to jointly observe
+physical or environmental settings such as sound, pressure, climatic changes,
+and so on. Wireless sensor networks are used in a wide range of areas: traffic
+control,vehicle detection, greenhouse monitoring and so on.
+● What are Vehicular ad hoc networks?
+Vehicular ad hoc networks (VANETs) are created by applying the principles of mobile ad hoc networks (MANETs) – the spontaneous creation of a wireless network of mobile devices – to the domain of vehicles. VANETs were first mentioned and introduced in 2001 under "car-to-car ad-hoc mobile communication and networking" applications, where networks can be formed and information can be relayed among cars. It was shown that vehicle-to-vehicle and vehicle-to-roadside communications architectures will co-exist in VANETs to provide road safety, navigation, and other roadside services. VANETs are a key part of the intelligent transportation systems (ITS) framework. Sometimes, VANETs are referred as Intelligent Transportation Networks. They are understood as having evolved into a broader "Internet of vehicles". Which itself is expected to ultimately evolve into an "Internet of autonomous vehicles".
+● What are Mobile ad hoc networks?
+MANET stands for Mobile Adhoc Network also called a wireless Adhoc network or Adhoc wireless network that usually has a routable networking environment on top of a Link Layer ad hoc network.. They consist of a set of mobile nodes connected wirelessly in a self-configured, self-healing network without having a fixed infrastructure. MANET nodes are free to move randomly as the network topology changes frequently. Each node behaves as a router as they forward traffic to other specified nodes in the network.
+Practical- 7
+Aim: Configuring Basic AP Settings
+● What is an Access Point?
+In computer networking, a wireless access point (WAP), or more generally just access point (AP), is a networking hardware device that allows other Wi-Fi devices to connect to a wired network. As a standalone device, the AP may have a wired connection to a router, but, in a wireless router, it can also be an integral component of the router itself. An AP is differentiated from a hotspot which is a physical location where Wi-Fi access is available.
+● How does AP work?
+They work by connecting directly into your router, or a network switch if you have one, via an ethernet cable.
+This provides the WAP with a connection to the local area network and the bandwidth it needs to function.
+From there, the WAP will receive and distribute a wireless signal in either the 2.4GHz or 5GHz frequency, more commonly known as Wi-Fi.
+This then allows you to connect to your home network wirelessly, giving you internet access where it may not have been possible previously.
+● Discuss its basic characteristics
+¤ Access points are the basic elements of a wireless network – They scan for the wireless devices in its range and all the neighbouring Wi-Fi systems connect to the Access Point to communicate with the network.
+¤ Access points offer a standard for connectivity – a, b/g, b/g/n which are all ratified by IEEE so that the Wi-Fi systems from various vendors can connect to the network.
+¤ Access points connect to PC’s, laptops, PDA’s, mobiles, Wi-Fi phones, Wi-Fi Cameras, Wi-Fi display management systems and a host of other devices that work on the Wi-Fi standard.
+¤ Access points can also scan the network for wireless threats and attacks.
+● Differentiate between AP and router.
+What is a Router? A router is a network device that serves two primary functions: (1) it connects multiple computers, phones, tablets, or other devices to form a managed local area network, and (2) it provides Internet access to all of the compatible devices that are connected to the router.
+What is an Access Point? An access point is a wireless network device that acts as a portal for devices to connect to a local area network. Access points are used for extending the wireless coverage of an existing network and for increasing the number of users that can connect to it.
+A local area network (LAN) can be set up by simply deploying a router and connecting one or several devices to it. Modern routers allow users to connect devices both via Ethernet cables or wirelessly (using Wi-Fi).
+However, in order for the router to distribute and deliver data to the devices within the local area network, it must be connected to an Internet service provider’s customer premises equipment (CPE) via an Ethernet cable.
+A high-speed Ethernet cable runs from a router to an access point, which transforms the wired signal into a wireless one. Wireless connectivity is typically the only available option for access points, establishing links with end-devices using Wi-Fi.
+Practical- 8
+Aim:- Configure Ethernet/Fast Ethernet Interface
+● What is the difference between Ethernet, Fast Ethernet and the gigabitethernet.
+S.NO Fast Ethernet Gigabit Ethernet 1. Fast Ethernet provides 100 Mbps speed. Gigabit Ethernet offers 1 Gbps speed. 2. Fast Ethernet is simple configured. While Gigabit Ethernet is more complicated than Fast Ethernet. 3. Fast Ethernet generate more delay comparatively. Gigabit Ethernet generates less delay than Fast Ethernet. 4. The coverage limit of Fast Ethernet is up to 10 km. While the coverage limit of Gigabit Ethernet is up to 70 km. 5. The round-trip delay in Fast Ethernet is 100 to 500 bit times. While the round-trip delay in Gigabit Ethernet is 4000 bit times. 6. Fast Ethernet is the Successor of 10-Base-T Ethernet. While Gigabit Ethernet is the successor of Fast Ethernet. 7. Fast ethernet is less scalable than Gigabit ethernet. Gigabit ethernet is more scalable than Fast ethernet.
+● What are different ways of providing the internet to different devices?
+Dial-Up Access
+To make an Internet connection over a telephone line, you connect your computer to a modem and the modem to your phone line. "Modem" combines parts of the words "modulator" and "demodulator," designating the two halves of the modem's role in making an online connection. The modem deciphers the signals it receives from other computers over the phone line, and then replies with signals that translate your activity into something the receiving systems can understand. Unlike other online connections, dial-up access runs on an as-needed basis and only when you instigate it, triggering your modem to dial an access number and establish online service.
+DSL and Cable Connections
+Digital Subscriber Line connections come in various forms depending on the relative speed of the two portions of the connection. Most residential DSL connections constitute ADSL service -- asynchronous DSL -- in which download speed vastly exceeds the pace at which you can upload information. DSL service runs over traditional hardwired phone lines, along with or instead of voice communications, and becomes available only in locations close enough to phone company equipment setups.
+Satellite Services
+Satellite services can provide broadband Internet access in rural or outlying areas unreached by wired phone lines or cable connections. Similar to satellite TV service but running on different antennas and receiving equipment, this broadband option requires an unobstructed aiming path between a small dish and the orbiting satellite. Wiring connects the antenna to a modem device that then connects to your computer. Bandwidth and uptime can fall prey to the same forms of service interruption that degrade satellite TV signals, including rain, snow and high wind.
+Mobile Methods
+With the advent of full-featured smartphones and tablet devices, many people conduct their online activities through wireless access. These services can reach speeds that rival or equal traditional wired broadband, including DSL and cable connections. Gaining access to these networks requires a location close enough to a cellular service tower to provide enough signal to make a connection. You can plug a USB modem device into a notebook computer to access wireless service, or connect your phone to your computer to share the bandwidth. This sharing process, called tethering, typically involves paying additional fees to the provider of your mobile phone service.
+Practical- 9
+AIM: Configure Radio Interfaces through the GUI.
+● What is a radio interface?
+The Common Public Radio Interface (CPRI) standard defines an interface between Radio Equipment Control (REC) and Radio Equipment (RE). Oftentimes, CPRI links are used to carry data between cell sites and base stations.
+Cable Free 4G / 5G Remote Radio Head (RRH) with CPRI fiber optic interface
+The purpose of CPRI is to allow replacement of a copper or coax cable connection between a radio transceiver (used example for mobile-telephone communication and typically located in a tower) and a base station (typically located at the ground
+nearby), so the connection can be made to a remote and more convenient location. This connection (often referred to as the Front haul network) can be a fiber to an installation where multiple remote base stations may be served. This fiber supports both single and multi-mode communication.
+● What is DHCP?
+The Dynamic Host Configuration Protocol (DHCP) is a network management protocol used on Internet Protocol (IP) networks for automatically assigning IP addresses and other communication parameters to devices connected to the network using a client–server architecture.
+The technology eliminates the need for individually configuring network devices manually, and consists of two network components, a centrally installed network DHCP server and client instances of the protocol stack on each computer or device. When connected to the network, and periodically thereafter, a client requests a set of parameters from the server using DHCP.
+DHCP can be implemented on networks ranging in size from residential networks to large campus networks and regional ISP networks. Many routers and residential gateways have DHCP server capability. Most residential network routers receive a unique IP address within the ISP network. Within a local network, a DHCP server assigns a local IP address to each device.
+● How does DHCP work?
+DHCP is an under-the-covers mechanism that automates the assignment of IP addresses to fixed and mobile hosts that are connected wired or wirelessly.
+When a device wants access to a network that’s using DHCP, it sends a request for an IP address that is picked up by a DHCP server. The server responds be delivering an IP address to the device, then monitors the use of the address and takes it back after a specified time or when the device shuts down. The IP address is then returned to the pool of addresses managed by the DHCP server to be reassigned to another device as it seeks access to the network.
+While the delegation of IP addresses is the central function of the protocol, DHCP also assigns a variety of related networking parameters including subnet mask, default gateway address, and domain name server (DNS). DHCP is an IEEE standard
+built on top of the older BOOTP (bootstrap protocol), which has become obsolete because it only works on IPv4 networks.
+● What is the role of the central office server in this practical?
+Central office servers in a RAN provide a path for the exchange of information between different LANs or subnetworks. A backbone can tie together diverse networks in the same building, in different buildings in a campus environment, or over wide areas. Normally, the backbone's capacity is greater than the networks connected to it.
