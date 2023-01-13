@@ -1,43 +1,11 @@
-P03
-#######################enumerating host, port, and service####################################
-###Port Scanning###
--man nmap
+Practical - 3 
+Load a WRT300N 
+LOAD TWO PC
 
-#target machine metasploitable2 ip
--ifconfig
-
-#port scanning using nmap 
--sudo nmap -v -p 0-65533 -A "ip_address" -oA Metaspoitable2
-
-#identify the operating system and the target machine’s openport details
-
-#Using the cat command open Metasploitable.nmap
-
-###Enumeration of Hosts###
-
-#Find out the operating system of the target metasploitable2
--sudo nmap -sS -O "ip_address"
-
-#Find out all the host services and their ports by using –sV
--sudo nmap -sV "ip_address"
-
-#Using Legion we can also perform enumeration 
-#Specify the IP Subnet and Bits
--"ip_address/range"
--submit
-###DNS Enumeration###
--host packtpub.com
-
-#To find out the host name servers and mail servers
--host -t ns packtpub.com
-
--host -t mx packtpub.com
-#To find the Name Servers by setting the type=ns using nslookup
--nslokup 
-
-#dig command can be used for advanced dns enumeration.
--dig packtpub.com
--dig packtpub.com mx
--dig packtpub.com uid
-
-
+- Swap the PC Ports with WiFi Ports
+- Open the router and set the SSID's to CS
+- Open PC go to Pc Wireless and select CS
+- Go to Access Restrictions on Wireless Router
+- Click on edit list and add the IP address 
+- Click on never and then transfer ping to the other side
+- Ping the Router and it should not work 

